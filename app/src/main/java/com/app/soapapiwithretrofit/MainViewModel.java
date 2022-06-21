@@ -9,19 +9,23 @@ import com.app.soapapiwithretrofit.api.models.request.Envelope;
 import com.app.soapapiwithretrofit.api.models.response.ResponseData;
 import com.app.soapapiwithretrofit.repository.Repository;
 
+import javax.inject.Inject;
 
-//@HiltViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel;
+
+
+@HiltViewModel
 public class MainViewModel extends ViewModel {
-    private MutableLiveData<ResponseData> responseLiveData =  new MutableLiveData<>();
-
+    protected MutableLiveData<ResponseData> responseLiveData =  new MutableLiveData<>();
     Repository repository;
 
-    //@Inject
-    public MainViewModel(){
-        this.repository = new Repository();
+    @Inject
+    public MainViewModel(Repository repository){
+        this.repository = repository;
     }
 
     MutableLiveData<ResponseData> getCapitalCity(Envelope envelope){
+        //responseLiveData.setValue(repository.getCapital(envelope).getValue());
         return repository.getCapital(envelope);
     }
 }

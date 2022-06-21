@@ -4,12 +4,12 @@ package com.app.soapapiwithretrofit.repository;/*
 
 import androidx.lifecycle.MutableLiveData;
 
-import com.app.soapapiwithretrofit.api.ApiClient;
 import com.app.soapapiwithretrofit.api.api.ApiService;
 import com.app.soapapiwithretrofit.api.models.request.Envelope;
 import com.app.soapapiwithretrofit.api.models.response.ResponseData;
 import com.app.soapapiwithretrofit.api.models.response.ResponseEnvelope;
-import com.app.soapapiwithretrofit.utils.Utils;
+
+import javax.inject.Inject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -18,9 +18,10 @@ import retrofit2.Response;
 
 public class Repository {
     private ApiService apiService;
-    //@Inject
-    public Repository() {
-        this.apiService = ApiClient.getApi();
+
+    @Inject
+    public Repository(ApiService apiService) {
+        this.apiService = apiService;
     }
 
     public MutableLiveData<ResponseData> getCapital(Envelope envelope){

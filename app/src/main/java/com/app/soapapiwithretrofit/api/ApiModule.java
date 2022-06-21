@@ -13,6 +13,10 @@ import org.simpleframework.xml.strategy.Strategy;
 
 import java.util.concurrent.TimeUnit;
 
+import dagger.Module;
+import dagger.Provides;
+import dagger.hilt.InstallIn;
+import dagger.hilt.components.SingletonComponent;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -22,8 +26,11 @@ import retrofit2.converter.simplexml.SimpleXmlConverterFactory;
  *  Created by Sandeep(Techno Learning) on 16,June,2022
  */
 
-public class ApiClient {
+@Module
+@InstallIn(SingletonComponent.class)
+public class ApiModule {
 
+    @Provides
     public static ApiService getApi() {
         return getRetrofit().create( ApiService.class );
     }

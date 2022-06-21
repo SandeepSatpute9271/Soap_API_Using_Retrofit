@@ -3,8 +3,11 @@ package com.app.soapapiwithretrofit.di;/*
  */
 
 
-//@dagger.Module
-//@InstallIn(SingletonComponent.class)
+import dagger.hilt.InstallIn;
+import dagger.hilt.android.components.ActivityComponent;
+
+@dagger.Module
+@InstallIn(ActivityComponent.class)
 public class Module {
 //    @Singleton
 //    @Provides
