@@ -8,7 +8,6 @@
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
-* [Project Status](#project-status)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
@@ -33,8 +32,7 @@ List of ready features here:
 
 
 ## Screenshots
-![Example screenshot](./screenshot1.png)
-![Example screenshot](./screenshot2.png)
+<img src="./screenshot1.png" width="200" height="400">        <img src="./screenshot2.png" width="200" height="400">
 <!-- If you have screenshots you'd like to share, include them here. -->
 
 
