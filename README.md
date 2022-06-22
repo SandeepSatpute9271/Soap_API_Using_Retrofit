@@ -63,7 +63,7 @@ When we comapare the Ksoap2 lib with retrofit in terms of performace following i
 
 ---------------------------------------------------------
 
-Soap Api With Retrofit – Repository [GitHub](https://github.com/SandeepSatpute9271/Soap_API_with_retrofit) 
+Soap Api With Ksoap2 – Repository [GitHub](https://github.com/SandeepSatpute9271/Soap_Api_Using_Ksoap2) 
 
 
 ## Contact
