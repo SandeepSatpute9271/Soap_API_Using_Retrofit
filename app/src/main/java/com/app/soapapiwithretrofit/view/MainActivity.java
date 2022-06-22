@@ -1,4 +1,4 @@
-package com.app.soapapiwithretrofit;
+package com.app.soapapiwithretrofit.view;
 /* Created by Sandeep(Techno Learning) on 16,June,2022
         */
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,11 +12,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.app.soapapiwithretrofit.R;
 import com.app.soapapiwithretrofit.api.models.request.RequestBody;
 import com.app.soapapiwithretrofit.api.models.request.RequestData;
 import com.app.soapapiwithretrofit.api.models.request.Envelope;
 import com.app.soapapiwithretrofit.api.models.response.ResponseData;
 import com.app.soapapiwithretrofit.utils.Utils;
+import com.app.soapapiwithretrofit.viewmodel.MainViewModel;
 
 import javax.inject.Inject;
 

@@ -4,14 +4,10 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.text.TextUtils;
-
-import com.app.soapapiwithretrofit.MainActivity;
 
 import java.net.InetAddress;
-import java.util.Date;
 
- /* Created by Sandeep(Techno Learning) on 16,June,2022
+/* Created by Sandeep(Techno Learning) on 16,June,2022
          */
 
 public class Utils {

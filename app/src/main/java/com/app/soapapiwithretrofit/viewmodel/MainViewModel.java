@@ -1,4 +1,4 @@
-package com.app.soapapiwithretrofit;/*
+package com.app.soapapiwithretrofit.viewmodel;/*
  * Created by Sandeep(Techno Learning) on 21,June,2022
  */
 
@@ -16,7 +16,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 
 @HiltViewModel
 public class MainViewModel extends ViewModel {
-    protected MutableLiveData<ResponseData> responseLiveData =  new MutableLiveData<>();
+    //protected MutableLiveData<ResponseData> responseLiveData =  new MutableLiveData<>();
     Repository repository;
 
     @Inject
@@ -24,8 +24,8 @@ public class MainViewModel extends ViewModel {
         this.repository = repository;
     }
 
-    MutableLiveData<ResponseData> getCapitalCity(Envelope envelope){
-        responseLiveData.postValue(repository.getCapital(envelope).getValue());
+    public MutableLiveData<ResponseData> getCapitalCity(Envelope envelope){
+        //responseLiveData.postValue(repository.getCapital(envelope).getValue());
         return repository.getCapital(envelope);
     }
 }
