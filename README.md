@@ -8,6 +8,7 @@
 * [Screenshots](#screenshots)
 * [Setup](#setup)
 * [Usage](#usage)
+* [Analysis](#analysis)
 * [Contact](#contact)
 <!-- * [License](#license) -->
 
@@ -45,6 +46,24 @@ Nothing such as important to setup the things here, Its just straight forward
 - Example of data
     - Input data required is first 2 captal letter of country (example: "IN")
     - Outpout Capital city of provided country (Example: "Delhi")
+
+
+## Analysis 
+When we comapare the Ksoap2 lib with retrofit in terms of performace following is the output it shows in api call
+
+  - Ksoap2: Time Taken In milli sec:1562 for Input IN
+  - Ksoap2: Time Taken In milli sec:644 for Input MX
+  - Ksoap2: Time Taken In milli sec:1704 for Input UK
+  - Ksoap2: Time Taken In milli sec:743 for Input KE
+---------------------------------------------------------
+  - Retrofit: Time Taken In milli sec:1603 for Input IN
+  - Retrofit: Time Taken In milli sec:510 for Input MX
+  - Retrofit: Time Taken In milli sec:511 for Input UK
+  - Retrofit: Time Taken In milli sec:725 for Input KE
+
+---------------------------------------------------------
+
+Soap Api With Retrofit – Repository [GitHub](https://github.com/SandeepSatpute9271/Soap_API_with_retrofit) 
 
 
 ## Contact
