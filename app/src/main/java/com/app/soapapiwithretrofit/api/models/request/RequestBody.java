@@ -7,8 +7,15 @@ package com.app.soapapiwithretrofit.api.models.request;
 import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
+import javax.inject.Inject;
+
 @Root(name = "Body", strict = false)
 public class RequestBody {
+
+    @Inject
+    RequestBody(){
+
+    }
 
     @Element(name = "CapitalCity",required = false)
     private RequestData requestData;

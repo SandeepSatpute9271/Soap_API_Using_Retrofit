@@ -25,7 +25,7 @@ public class MainViewModel extends ViewModel {
     }
 
     MutableLiveData<ResponseData> getCapitalCity(Envelope envelope){
-        //responseLiveData.setValue(repository.getCapital(envelope).getValue());
+        responseLiveData.postValue(repository.getCapital(envelope).getValue());
         return repository.getCapital(envelope);
     }
 }

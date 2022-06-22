@@ -18,6 +18,8 @@ import com.app.soapapiwithretrofit.api.models.request.Envelope;
 import com.app.soapapiwithretrofit.api.models.response.ResponseData;
 import com.app.soapapiwithretrofit.utils.Utils;
 
+import javax.inject.Inject;
+
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
@@ -25,9 +27,15 @@ public class MainActivity extends AppCompatActivity {
     private ProgressDialog pDialog;
     private TextView tvCapital;
     private EditText etCountry;
-    private String tag = MainActivity.class.getSimpleName();
+    private static String TAG = MainActivity.class.getSimpleName();
 
-    //@Inject
+    @Inject
+    Envelope envelope;
+    @Inject
+    RequestBody body;
+    @Inject
+    RequestData data;
+
     MainViewModel mainViewModel;
 
     @Override
@@ -55,10 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void getCapital(String textToConvert) {
         pDialog = Utils.showProgressBar(this);
-
-        Envelope envelope = new Envelope();
-        RequestBody body = new RequestBody();
-        RequestData data = new RequestData();
         data.setsCountryISOCode(textToConvert);
         body.setRequestData(data);
         envelope.setBody(body);

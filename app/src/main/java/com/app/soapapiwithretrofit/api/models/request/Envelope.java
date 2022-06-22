@@ -5,6 +5,8 @@ import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.NamespaceList;
 import org.simpleframework.xml.Root;
 
+import javax.inject.Inject;
+
 /**
  * Created by Sandeep(Techno Learning) on 16,June,2022
  */
@@ -14,6 +16,11 @@ import org.simpleframework.xml.Root;
         @Namespace(reference = "http://schemas.xmlsoap.org/soap/envelope/")
 })
 public class Envelope {
+
+    @Inject
+    Envelope(){
+
+    }
 
     @Element(name = "Body", required = false)
     private RequestBody body;

@@ -11,9 +11,17 @@ import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Namespace;
 import org.simpleframework.xml.Root;
 
+import javax.inject.Inject;
+
 @Root(name = Constants.METHOD_NAME, strict = false)
 @Namespace(reference = Constants.NAMESPACE)
 public class RequestData {
+
+    @Inject
+    RequestData(){
+
+    }
+
     @Element(name = "sCountryISOCode", required = false)
     private String sCountryISOCode;
 
