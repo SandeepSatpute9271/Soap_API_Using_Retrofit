@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -69,12 +70,17 @@ public class MainActivity extends AppCompatActivity {
         body.setRequestData(data);
         envelope.setBody(body);
 
+        long start = System.currentTimeMillis();
+
         mainViewModel.getCapitalCity(envelope).observe(this, new Observer<ResponseData>() {
             @Override
             public void onChanged(ResponseData responseData) {
                 if (responseData!=null) {
                     hideProgressDialog();
                     if (Utils.hasValue(responseData.getCapitalCityResult())) {
+                        long end = System.currentTimeMillis();
+                        long elapsedTime = end - start;
+                        Log.e(TAG,"Retrofit: Time Taken In milli sec:"+elapsedTime+" for Input "+etCountry.getText().toString().trim());
                         tvCapital.setText(responseData.getCapitalCityResult());
                     }
                 }

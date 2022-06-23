@@ -33,12 +33,12 @@ public class Repository {
             public void onResponse(Call<ResponseEnvelope> call, Response<ResponseEnvelope> response) {
                 ResponseData data = ((ResponseEnvelope)response.body())
                         .getBody().getCapitalCityResponse();
-                responseDataMutableLiveData.setValue(data);
+                responseDataMutableLiveData.postValue(data);
             }
 
             @Override
             public void onFailure(Call<ResponseEnvelope> call, Throwable t) {
-                responseDataMutableLiveData.setValue(null);
+                responseDataMutableLiveData.postValue(null);
             }
         });
         return  responseDataMutableLiveData;

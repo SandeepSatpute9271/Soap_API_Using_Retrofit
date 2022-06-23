@@ -16,7 +16,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel;
 
 @HiltViewModel
 public class MainViewModel extends ViewModel {
-    //protected MutableLiveData<ResponseData> responseLiveData =  new MutableLiveData<>();
     Repository repository;
 
     @Inject
@@ -25,7 +24,6 @@ public class MainViewModel extends ViewModel {
     }
 
     public MutableLiveData<ResponseData> getCapitalCity(Envelope envelope){
-        //responseLiveData.postValue(repository.getCapital(envelope).getValue());
         return repository.getCapital(envelope);
     }
 }
